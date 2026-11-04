@@ -91,11 +91,14 @@ outputs:
 # Markdown Rendering
 # =====================================
 
-
 markup:
   goldmark:
     renderer:
       unsafe: true
+
+    renderHooks:
+      link:
+        useEmbedded: always
 
     extensions:
       passthrough:
@@ -116,4 +119,3 @@ markup:
     startLevel: 2
     endLevel: 4
     ordered: false
-
