@@ -1,0 +1,119 @@
+
+# =====================================
+# Basic Configuration
+# =====================================
+
+baseURL: "http://localhost:1313/"
+locale: "zh-CN"
+title: "My Blog"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+enableEmoji: true
+hasCJKLanguage: true
+
+pagination:
+  pagerSize: 10
+
+# =====================================
+# PaperMod Theme
+# =====================================
+
+params:
+  env: development
+  defaultTheme: auto
+  disableThemeToggle: false
+  math: false
+
+  # Reading experience
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: true
+
+  # Homepage
+  homeInfoParams:
+    Title: "Welcome to My Blog"
+    Content: >
+      Notes on AI Infrastructure, LLM Systems,
+      Distributed Training, and Research.
+
+  # Social links
+  socialIcons:
+    - name: github
+      url: "https://github.com/LLyyyyl"
+
+# =====================================
+# Navigation
+# =====================================
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      pageRef: /posts
+      weight: 10
+
+    - identifier: notes
+      name: Notes
+      pageRef: /notes
+      weight: 20
+
+    - identifier: reading
+      name: Reading
+      pageRef: /reading
+      weight: 30
+
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 40
+
+    - identifier: search
+      name: Search
+      pageRef: /search
+      weight: 50
+
+# =====================================
+# Search
+# =====================================
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# =====================================
+# Markdown Rendering
+# =====================================
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['\[', '\]']
+            - ['$$', '$$']
+          inline:
+            - ['\(', '\)']
+
+  highlight:
+    codeFences: true
+    lineNos: true
+    noClasses: false
+
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+
