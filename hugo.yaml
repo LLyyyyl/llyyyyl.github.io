@@ -5,7 +5,7 @@
 
 baseURL: "http://localhost:1313/"
 locale: "zh-CN"
-title: "My Blog"
+title: "Yaling Liang"
 theme: "PaperMod"
 
 enableRobotsTXT: true
@@ -67,15 +67,15 @@ menu:
       pageRef: /reading
       weight: 30
 
-    - identifier: about
-      name: About
-      pageRef: /about
-      weight: 40
+    # - identifier: about
+    #   name: About
+    #   pageRef: /about
+    #   weight: 40
 
-    - identifier: search
-      name: Search
-      pageRef: /search
-      weight: 50
+    # - identifier: search
+    #   name: Search
+    #   pageRef: /search
+    #   weight: 50
 
 # =====================================
 # Search

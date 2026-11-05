@@ -1,0 +1,292 @@
+
+/* ==========================================
+   Personal Homepage
+   Hugo + PaperMod
+
+   Design:
+   - Artistic minimalism
+   - 45:55 editorial layout
+   - Warm neutral background
+   - Subtle blue-gray accents
+   ========================================== */
+
+
+/* ==========================================
+   1. Homepage Color Palette
+   ========================================== */
+
+/* Light mode */
+html:has(.personal-home) {
+  --theme: #faf9f6;
+  --entry: #faf9f6;
+  --primary: #292d30;
+  --secondary: #747d84;
+  --tertiary: #e6e8e7;
+  --content: #373d42;
+}
+
+/* Dark mode */
+html.dark:has(.personal-home) {
+  --theme: #1b2025;
+  --entry: #22282e;
+  --primary: #ecebe7;
+  --secondary: #a1adb5;
+  --tertiary: #343d44;
+  --content: #d6d8d8;
+}
+
+
+/* ==========================================
+   2. Homepage Container
+   ========================================== */
+
+/* Only customize homepage layout */
+body:has(.personal-home) .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Main 45:55 layout */
+.personal-home {
+  display: grid;
+  grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  align-items: center;
+
+  width: 100%;
+  max-width: 1080px;
+
+  gap: 64px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   3. Left: Introduction
+   ========================================== */
+
+.home-intro {
+  min-width: 0;
+}
+
+/* Main serif heading */
+.home-intro h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+
+  color: var(--primary);
+  margin: 0 0 28px;
+}
+
+/* Default paragraph rhythm */
+.home-intro p {
+  margin: 0 0 18px;
+  line-height: 1.8;
+}
+
+
+/* Main personal introduction */
+.home-intro .home-description {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.12rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--primary);
+  margin-bottom: 22px;
+}
+
+/* Academic identity */
+.home-intro .home-identity {
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  color: var(--secondary);
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   4. Social Links
+   ========================================== */
+
+.home-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 28px;
+}
+
+.home-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  color: var(--secondary);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.home-links a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.home-links a:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+.home-links svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* GitHub uses a filled icon */
+.home-links a[aria-label="GitHub"] svg {
+  fill: currentColor;
+}
+
+/* Email uses an outline icon */
+.home-links a[href^="mailto:"] svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+
+/* ==========================================
+   5. Right: Artwork
+   ========================================== */
+
+.home-artwork {
+  margin: 0;
+  min-width: 0;
+}
+
+.home-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Artwork caption */
+.home-artwork figcaption {
+  margin-top: 14px;
+
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.6;
+
+  color: var(--secondary);
+}
+
+
+/* ==========================================
+   6. Mobile Layout
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  body:has(.personal-home) .main {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .personal-home {
+    grid-template-columns: 1fr;
+    gap: 36px;
+
+    margin: 36px auto;
+  }
+
+  .home-intro {
+    order: 1;
+  }
+
+  .home-artwork {
+    order: 2;
+  }
+
+  .home-intro h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .home-links {
+    margin-top: 22px;
+  }
+
+  .home-artwork figcaption {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ==========================================
+   7. Reduced Motion
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-links a {
+    transition: none;
+  }
+
+  .home-links a:hover {
+    transform: none;
+  }
+}
+
+/* Academic institution links */
+
+/* Academic institution links */
+
+.home-description a {
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.home-description a:hover {
+  opacity: 0.65;
+}
+
+/* ==========================================
+   Header Typography
+   ========================================== */
+
+.logo a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+/* Navigation typography */
+
+#menu a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}

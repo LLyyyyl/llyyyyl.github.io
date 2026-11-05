@@ -1,0 +1,76 @@
+
+{{ define "main" }}
+
+<section class="personal-home">
+
+    <div class="home-intro">
+
+    <h1>Hi, I'm Yaling.</h1>
+
+    <p class="home-description">
+    I'm pursuing a PhD at
+    <a href="https://www.fudan.edu.cn/"
+        target="_blank"
+        rel="noopener noreferrer">Fudan University</a>
+    in collaboration with
+    <a href="https://www.sii.edu.cn/main.htm"
+        target="_blank"
+        rel="noopener noreferrer">Shanghai Innovation Institute</a>,
+    focusing on AI infrastructure.
+    </p>
+
+    <p class="home-description">
+    Curious about the systems behind intelligence
+    and the ideas that make it possible.
+    </p>
+
+    <div class="home-links">
+
+        <a
+        href="https://github.com/LLyyyyl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        title="GitHub"
+        >
+        {{ partial "svg.html" (dict "name" "github") }}
+        </a>
+
+        <a
+        href="mailto:yalingliang2000@gmail.com"
+        aria-label="Email"
+        title="yalingliang2000@gmail.com"
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+        >
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 6 10 7 10-7"/>
+        </svg>
+        </a>
+
+    </div>
+
+    </div>
+
+    <figure class="home-artwork">
+        <img
+        src="/images/wind-tree.jpg"
+        alt="A tree bending in the wind beneath a blue sky"
+        >
+
+        <figcaption>
+        To grow is to move with the wind, not against it.
+        </figcaption>
+    </figure>
+
+</section>
+
+{{ end }}
