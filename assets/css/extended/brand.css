@@ -1,0 +1,54 @@
+/* Keep the personal mark crisp and aligned with the existing serif wordmark. */
+#menu a {
+  position: relative;
+}
+
+#menu .active {
+  text-decoration: none;
+}
+
+#menu a[aria-current]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: #b86742;
+  transform: translateX(-50%);
+}
+
+[data-theme="dark"] #menu a[aria-current]::after {
+  background: #e3ab7d;
+}
+
+.logo > a {
+  column-gap: 12px;
+}
+
+.logo > a img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  box-shadow: 0 0 0 1px rgb(250 249 246 / 12%);
+}
+
+.logo > a:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+  .logo > a {
+    column-gap: 9px;
+  }
+
+  .logo > a img {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -25,6 +25,14 @@ params:
   disableThemeToggle: false
   math: false
 
+  # Personal wordmark and browser icon
+  label:
+    text: "Yaling Liang"
+    icon: "images/yaling-mark.svg"
+    iconHeight: 36
+  assets:
+    favicon: "images/yaling-mark.svg"
+
   # Reading experience
   ShowReadingTime: true
   ShowShareButtons: false
@@ -52,6 +60,11 @@ params:
 
 menu:
   main:
+    - identifier: home
+      name: Home
+      pageRef: /
+      weight: 5
+
     - identifier: blog
       name: Blog
       pageRef: /posts
