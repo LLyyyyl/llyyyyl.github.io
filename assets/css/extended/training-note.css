@@ -1,0 +1,74 @@
+/* Scoped reading styles for the training-loop note. */
+.training-note .note-example { margin: 26px 0; padding: 2px 0 2px 18px; border-left: 2px solid #b86742; }
+[data-theme="dark"] .training-note .note-example { border-left-color: #e3ab7d; }
+.training-note .post-content .note-example > p { margin-bottom: 8px; }
+.training-note .post-content .note-example > :last-child { margin-bottom: 0; }
+.training-note .note-example ul { padding-left: 0; list-style: none; }
+.training-note .post-description { margin: 14px 0 18px; font-size: 16px; line-height: 1.8; color: var(--secondary); }
+.training-note .post-intro-box { display: flex; align-items: flex-start; gap: 12px; margin-top: 18px; padding: 16px 18px; border: 1px solid var(--border); border-radius: 8px; background: var(--code-bg); }
+.training-note .post-intro-icon { flex: 0 0 20px; margin-top: 4px; color: var(--secondary); }
+.training-note .post-intro-box > span { min-width: 0; }
+.training-note .post-header-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.training-note .post-header { margin-bottom: 12px; }
+.training-note .post-intro-box { margin-bottom: 0; }
+.training-note .post-reading-layout > .post-content { margin-top: 0; }
+.training-note .post-header-tags li { margin: 0; }
+.training-note .post-header-tags a { font-size: 12px; line-height: 26px; padding: 0 10px; text-decoration: none; border: 0; box-shadow: none; color: #785e66; background: #eee3e6; }
+.training-note .post-header-tags li:nth-child(even) a { color: #576d65; background: #e2ebe6; }
+.training-note .post-header-tags a:hover { background: #e5d5da; }
+.training-note .post-header-tags li:nth-child(even) a:hover { background: #d4e1d9; }
+.training-note .post-content { font-size: 17px; line-height: 1.9; }
+.training-note .post-content p { margin: 0 0 20px; }
+.training-note .post-content h2 { margin: 32px 0 26px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 23px; line-height: 1.5; }
+.training-note .post-content > h2:first-of-type { margin-top: 0; padding-top: 20px; border-top: 1px solid var(--border); }
+.training-note .post-content h3 { margin: 32px 0 16px; font-size: 18px; font-weight: 600; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif; }
+.training-note .post-content h2:has(+ h3) { margin-bottom: 18px; }
+.training-note .post-content h2 + h3 { margin-top: 18px; }
+.training-note .post-content h4 { margin: 30px 0 18px; font-size: 18px; line-height: 1.7; color: var(--primary); }
+.training-note .post-content h5 { margin: 26px 0 16px; padding-top: 0; border: 0; font-size: 17px; line-height: 1.7; color: var(--primary); }
+.training-note .post-content strong { font-weight: 650; }
+.training-note .post-content strong.note-key-point { color: #a33e34; font-weight: 650; }
+.dark .training-note .post-content strong.note-key-point { color: #efa398; }
+.training-note .post-content li { margin: 8px 0; }
+.training-note .post-content mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 12px 2px; margin: 24px 0 !important; }
+.training-note .post-content .concept-box { border-radius: 8px; box-shadow: none; }
+.training-note .post-content table.autograd-table { font-size: 14px; line-height: 1.75; }
+.training-note .post-content table.autograd-table th,
+.training-note .post-content table.autograd-table td { padding: 14px; }
+.training-note .post-content .autograd-table-wrap { margin: 24px 0; border: 1px solid var(--border); border-radius: 8px; }
+.training-note .post-content .autograd-table { margin: 0; }
+.training-note .training-diagram { margin: 28px 0; padding: 24px 20px 18px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; }
+.training-note .post-content p:has(+ .training-diagram > .training-flow) { margin-bottom: 22px; }
+.training-note .training-diagram:has(> .training-flow) { margin-top: 22px; padding: 0; border: 0; background: transparent; }
+.training-note .post-content .training-flow { --flow-gap: max(18px, calc((100cqw - 550px) / 4)); container-type: inline-size; display: grid; grid-template-columns: repeat(5,minmax(0,110px)); justify-content: space-between; gap: 18px; list-style: none; padding: 0; margin: 0; }
+.training-note .post-content .training-flow li { position: relative; text-align: center; margin: 0; padding: 10px 5px; border: 1px solid #dfd8d5; border-radius: 12px; background: #f2e9e5; }
+.training-note .post-content .training-flow li:nth-child(2) { background: #edf0e6; border-color: #dde2d4; }
+.training-note .post-content .training-flow li:nth-child(3) { background: #e8eef2; border-color: #d7e0e7; }
+.training-note .post-content .training-flow li:nth-child(4) { background: #eee9f1; border-color: #e0d8e6; }
+.training-note .post-content .training-flow li:nth-child(5) { background: #f3eede; border-color: #e5dfcb; }
+[data-theme="dark"] .training-note .post-content .training-flow li { background: #3b3331; border-color: #504440; }
+[data-theme="dark"] .training-note .post-content .training-flow li:nth-child(2) { background: #343a30; border-color: #464e40; }
+[data-theme="dark"] .training-note .post-content .training-flow li:nth-child(3) { background: #303940; border-color: #414e58; }
+[data-theme="dark"] .training-note .post-content .training-flow li:nth-child(4) { background: #39333e; border-color: #4d4455; }
+[data-theme="dark"] .training-note .post-content .training-flow li:nth-child(5) { background: #3c382d; border-color: #514b3b; }
+.training-note .training-flow li + li::before { content: ""; position: absolute; right: calc(100% + 1px + var(--flow-gap) / 2); width: min(32px, var(--flow-gap)); height: 16px; top: 50%; transform: translate(50%, -50%); background: var(--secondary); opacity: 0.65; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 16'%3E%3Cpath d='M2 8h11M18 4l5 4-5 4m7-8 5 4-5 4' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+.training-note .training-flow code { padding: 0; font-size: 12px; background: transparent; white-space: nowrap; }
+.training-note .training-flow span { display: block; font-size: 12px; color: var(--secondary); margin-top: 2px; }
+.training-note .post-content figcaption { margin: 18px 0 0; font-size: 12px; line-height: 1.7; text-align: center; color: var(--secondary); }
+.training-note .gradient-route { display: flex; align-items: center; justify-content: space-around; gap: 12px; font-size: 16px; }
+.training-note .gradient-route b { color: var(--secondary); font-weight: normal; }
+.training-note .gradient-return { text-align: center; margin-top: 16px; font-size: 13px; color: var(--note-accent); }
+@media(max-width: 600px) {
+ .training-note .post-content { font-size: 16px; }
+ .training-note .post-content h2 { font-size: 21px; margin-top: 28px; }
+ .training-note .post-content h3 { font-size: 17px; }
+ .training-note .post-content .training-flow { grid-template-columns: minmax(0,160px); gap: 24px; }
+ .training-note .training-flow li + li::before { left: 50%; right: auto; top: -13px; width: 22px; transform: translate(-50%, -50%) rotate(90deg); }
+ .training-note .training-flow code { font-size: 14px; }
+ .training-note .gradient-route { font-size: 14px; gap: 5px; }
+}
+
+
+.training-note .post-content .optimizer-table th:first-child { width: 18%; }
+.training-note .post-content .optimizer-table th:nth-child(2) { width: 44%; }
+.training-note .post-content .optimizer-table th:nth-child(3) { width: 38%; }
