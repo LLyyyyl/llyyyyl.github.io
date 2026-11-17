@@ -1,0 +1,82 @@
+.note-tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.post-content .note-inline-call {
+  padding: 0.2rem 0.3rem;
+  border-radius: 2px;
+  background: var(--code-bg);
+  font-family: monospace;
+  font-size: 0.78em;
+}
+
+.note-inline-call .note-tooltip-content {
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.note-tooltip-term {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+}
+
+.note-tooltip:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.note-tooltip-content {
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22rem;
+  max-width: calc(100vw - 2rem);
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--entry);
+  color: var(--content);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  text-align: left;
+  cursor: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.note-tooltip-paragraph {
+  display: block;
+}
+
+.note-tooltip-paragraph + .note-tooltip-paragraph {
+  margin-top: 0.75em;
+}
+
+.note-tooltip-paragraph + .note-tooltip-paragraph:has(> code:first-child) {
+  margin-top: 1.25em;
+}
+
+.note-tooltip:hover > .note-tooltip-content,
+.note-tooltip:focus-visible > .note-tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Keep longer explanations within the viewport on small screens. */
+@media (max-width: 600px) {
+  .note-tooltip-content {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    width: auto;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+}

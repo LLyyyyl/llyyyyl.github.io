@@ -1,0 +1,2 @@
+{{- $id := printf "note-tooltip-%d" .Ordinal -}}
+<span class="note-tooltip" tabindex="0" aria-describedby="{{ $id }}"><span class="note-tooltip-term">{{ if .Get "code" }}<code>{{ .Get "term" }}</code>{{ else }}{{ .Get "term" }}{{ end }}</span><span class="note-tooltip-content" id="{{ $id }}" role="tooltip">{{- range split (.Inner | strings.TrimSpace) "\n\n" -}}<span class="note-tooltip-paragraph">{{ $.Page.RenderString (dict "display" "inline") . }}</span>{{- end -}}</span></span>

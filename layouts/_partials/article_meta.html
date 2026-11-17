@@ -1,0 +1,12 @@
+{{- if not .Date.IsZero -}}
+<time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format (default "2006/01/02" site.Params.DateFormat) }}</time>
+{{- end -}}
+{{- if (.Param "ShowReadingTime") -}}
+<span class="post-reading-time">阅读约 {{ .ReadingTime }} 分钟</span>
+{{- end -}}
+{{- if (.Param "ShowWordCount") -}}
+<span>{{ i18n "words" .WordCount | default (printf "%d words" .WordCount) }}</span>
+{{- end -}}
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) -}}<span>{{ . }}</span>{{- end -}}
+{{- end -}}

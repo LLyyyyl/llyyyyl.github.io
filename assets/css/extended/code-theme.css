@@ -1,0 +1,67 @@
+/* Follow PaperMod's light and dark modes. */
+:root {
+  --code-block-bg: #f6f6f6;
+  --code-text: #24292f;
+  --inline-code-bg: #eeeeef;
+  --code-muted: #59616b;
+}
+
+:root[data-theme="dark"] {
+  --code-block-bg: #24262b;
+  --code-text: #e6edf3;
+  --inline-code-bg: #37383e;
+  --code-muted: #a3abb5;
+}
+
+.post-content :not(pre) > code {
+  background: var(--inline-code-bg);
+  color: var(--code-text);
+}
+
+.md-content pre code {
+  color: var(--code-text);
+}
+
+:root .md-content .chroma :is(.ln, .lnt) {
+  color: var(--code-muted);
+}
+
+.md-content .copy-code {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  line-height: 1;
+  background: var(--inline-code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--border);
+}
+
+.md-content .copy-code svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.md-content .copy-code:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.md-content :is(.highlight, pre):hover .copy-code,
+.md-content :is(.highlight, pre):focus-within .copy-code {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (hover: none) {
+  .md-content .copy-code {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

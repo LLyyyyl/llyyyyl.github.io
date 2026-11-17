@@ -34,12 +34,14 @@ params:
     favicon: "images/yaling-mark.svg"
 
   # Reading experience
+  DateFormat: "2006/01/02"
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowToc: true
+  disableAnchoredHeadings: true
   TocOpen: true
 
   # Homepage

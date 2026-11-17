@@ -1,0 +1,1 @@
+<div class="note-concept-box{{ with .Get "title" }} note-concept-box-titled{{ end }}">{{ with .Get "title" }}<p class="note-concept-box-title">{{ . }}</p>{{ end }}{{ .Page.RenderString (dict "display" "block") .Inner }}</div>

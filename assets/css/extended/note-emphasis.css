@@ -1,0 +1,197 @@
+.post-content {
+  --note-accent: #496b83;
+}
+
+.post-single .post-content h6 {
+  margin: 26px 0 14px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--primary);
+}
+
+.post-single .post-content h4:is(#常见损失函数, #常见优化器) {
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.post-single .post-content h5 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--note-accent);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.post-content strong.note-key-point {
+  color: #a33e34;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .post-content strong.note-key-point {
+  color: #efa398;
+}
+
+.post-content .autograd-table-wrap {
+  margin: 18px 0 24px;
+  overflow-x: auto;
+}
+
+.post-content table.autograd-table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  border-collapse: collapse;
+}
+
+.post-single .post-content table.autograd-table th,
+.post-single .post-content table.autograd-table td {
+  padding: 16px 18px;
+  text-align: left;
+  vertical-align: top;
+  min-width: 0;
+  white-space: normal;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-single .post-content table.autograd-table th,
+.post-single .post-content table.autograd-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.post-content .autograd-table thead th {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background: var(--code-bg);
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.post-content .autograd-table th:first-child { width: 21%; }
+.post-content .autograd-table th:nth-child(2) { width: 44%; }
+.post-content .autograd-table tbody th { font-weight: 500; }
+.post-content .autograd-table .tensor-example { display: block; }
+.post-content table.lifecycle-table {
+  min-width: 760px;
+}
+.post-content .lifecycle-table thead th:nth-child(1) { width: 20%; }
+.post-content .lifecycle-table thead th:nth-child(2) { width: 15%; }
+.post-content .lifecycle-table thead th:nth-child(3) { width: 16%; }
+.post-content .lifecycle-table thead th:nth-child(4) { width: 27%; }
+.post-content .lifecycle-table thead th:nth-child(5) { width: 22%; }
+.post-content .autograd-table .tensor-example + .tensor-example {
+  margin-top: 6px;
+  color: var(--secondary);
+}
+.post-content .autograd-table-wrap:focus-visible {
+  outline: 2px solid var(--note-accent);
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .post-content table.autograd-table { min-width: 600px; }
+  .post-content table.lifecycle-table { min-width: 760px; }
+  .post-content .autograd-table th,
+  .post-content .autograd-table td { padding: 12px; }
+}
+
+.post-single .post-content .note-reference {
+  color: var(--secondary);
+  font-size: 0.9em;
+}
+
+.post-single .post-content .note-reference a {
+  color: var(--note-accent);
+  text-decoration: none;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.post-single .post-content .note-reference a:hover {
+  color: var(--primary);
+}
+
+.post-single .post-content .note-reference a:focus-visible {
+  outline: 2px solid var(--note-accent);
+  outline-offset: 3px;
+}
+
+.post-single .post-content .note-aside {
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .post-content {
+  --note-accent: #a9c7dd;
+}
+
+.post-single .post-content .note-section-label {
+  margin: 18px 0 8px;
+  color: var(--note-accent);
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.post-single .post-content .note-section-label + ol > li::marker {
+  font-weight: 500;
+}
+
+.post-single .post-content .note-section-label + ol > li > strong {
+  font-weight: 500;
+}
+
+.post-single .post-content p:has(+ .note-concept-box) {
+  margin-bottom: 10px;
+}
+
+.post-single .post-content .note-concept-box {
+  margin: 10px 0;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--code-bg);
+}
+
+.post-single .post-content .note-concept-box > ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.post-single .post-content .note-concept-box li {
+  margin-top: 0.1em;
+}
+
+.post-single .post-content .note-concept-box-titled {
+  padding: 16px 20px;
+  border-color: var(--tertiary);
+  background: var(--code-bg);
+}
+
+.post-single .post-content .note-concept-box-title {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}

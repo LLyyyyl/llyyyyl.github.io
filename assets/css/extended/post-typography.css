@@ -1,0 +1,95 @@
+/* Shared reading typography with explicit Chinese font fallbacks. */
+.post-single .post-content {
+  font-family: "Times New Roman", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.post-single .post-content :not(pre) > code {
+  font-size: 0.88em;
+}
+
+.post-single .post-content pre code {
+  font-size: 14px;
+}
+
+.post-single .post-title,
+.post-single .post-content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.post-single .post-title {
+  font-size: clamp(28px, 3vw, 34px);
+  margin-bottom: 12px;
+}
+
+.post-single .post-header {
+  margin-bottom: 16px;
+}
+
+.post-single .post-header .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
+  margin-top: 8px;
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+.post-single .post-date {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}
+
+.post-single .post-content h1 {
+  font-size: 30px;
+  margin: 48px 0 20px;
+}
+
+.post-single .post-content h2 {
+  font-size: 23px;
+  margin: 40px 0 18px;
+}
+
+.post-single .post-content h3 {
+  font-size: 21px;
+  margin: 32px 0 14px;
+}
+
+.post-single .post-content h4 {
+  font-size: 18px;
+}
+
+.post-single .post-content h5 {
+  font-size: 16px;
+}
+
+.post-single .post-content h6 {
+  font-size: 15px;
+}
+
+.post-single .post-content > :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .post-single .post-content h1 {
+    font-size: 27px;
+  }
+
+  .post-single .post-content h2 {
+    font-size: 21px;
+  }
+}
